@@ -39,18 +39,36 @@
 // )
 // }
 
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
+
+// export default function Counter() {
+//     const [count ,setCount]=useState(0);
+//     return(
+//             <div>
+//                 <p>Count: {count}</p>
+//                 <button onClick={() => setCount(count +1)}>increase</button>
+//             </div>
+
+//     )
+
+
+// }
+
+import React from 'react'
 
 export default function Counter() {
-    const [count ,setCount]=useState(0);
-    return(
-            <div>
-                <p>Count: {count}</p>
-                <button onClick={() => setCount(count +1)}>increase</button>
-            </div>
 
-    )
+    function Child({value ,onchage}){
+        return <input value={value}  onChange={e =>onchage(e.target.value)}/>
+    }
+  return (
+    <div>
 
 
+    </div>
+  )
 }
+
+
+
 
