@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-export default function Counter() {
-  const [count, setCount] = useState(0);
-  const items = ["Apple", "Banana", "Orange"];
-  function Greeting(props){
-    return <h1>Welcome to : {props.name}</h1>
-  }
+// export default function Counter() {
+//   const [count, setCount] = useState(0);
+//   const items = ["Apple", "Banana", "Orange"];
+//   function Greeting(props){
+//     return <h1>Welcome to : {props.name}</h1>
+//   }
 
-  function User({name ,age}){
-    return <h1>{name} -{age}</h1>
-  }
+//   function User({name ,age}){
+//     return <h1>{name} -{age}</h1>
+//   }
 
-function Button({ onClick,text }) {
-  return <button onClick={onClick}>{text}Click Me</button>
-}
+// function Button({ onClick,text }) {
+//   return <button onClick={onClick}>{text}Click Me</button>
+// }
 
-    const handleClick=()=>alert('Button clicked');
+//     const handleClick=()=>alert('Button clicked');
     
 
 //   return (
@@ -30,11 +30,27 @@ function Button({ onClick,text }) {
 //       </ul>
 //     </div>
 //   );
-return (
-    <>
-    <Greeting name='React.js'/>
-    <User name='Ali' age={25}/>
-    <Button onClick={handleClick} text='Click Me'/>
-   </>
-)
+// return (
+//     <>
+//     <Greeting name='React.js'/>
+//     <User name='Ali' age={25}/>
+//     <Button onClick={handleClick} text='Click Me'/>
+//    </>
+// )
+// }
+
+import React, { useState } from 'react'
+
+export default function Counter() {
+    const [count ,setCount]=useState(0);
+    return(
+            <div>
+                <p>Count: {count}</p>
+                <button onClick={() => setCount(count +1)}>increase</button>
+            </div>
+
+    )
+
+
 }
+
