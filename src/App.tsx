@@ -129,11 +129,13 @@
 
 import React from 'react'
 import UseRef from './components/UseRef'
+import RenderCount from './components/RenderCount'
 
 function App() {
   return (
     <div>
       <UseRef/>
+      <RenderCount/>
     </div>
   )
 }
