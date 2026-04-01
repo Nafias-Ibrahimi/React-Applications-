@@ -39,35 +39,39 @@
 // )
 // }
 
-// import React, { useState } from 'react'
-
-// export default function Counter() {
-//     const [count ,setCount]=useState(0);
-//     return(
-//             <div>
-//                 <p>Count: {count}</p>
-//                 <button onClick={() => setCount(count +1)}>increase</button>
-//             </div>
-
-//     )
-
-
-// }
-
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Counter() {
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState('Welcome');
 
-    function Child({value ,onchage}){
-        return <input value={value}  onChange={e =>onchage(e.target.value)}/>
-    }
+  function Child({ value, onChange }) {
+    return (
+      <input 
+        type="text" 
+        value={value}
+        onChange={e => onChange(e.target.value)}
+      />
+    )
+  }
+
   return (
     <div>
+      {/* part number*/}
+      <h2>Count: {count}</h2>
+      <Child value={count} onChange={(val) => setCount(Number(val))} />
+      <button onClick={() => setCount(count + 1)}>+ Increase</button>
+      <button onClick={() => setCount(count - 1)}>- Decrease</button>
 
-
+      {/* part text*/}
+      <h2>{text}</h2>
+      <Child value={text} onChange={setText} />
     </div>
   )
 }
+
+
+
 
 
 
