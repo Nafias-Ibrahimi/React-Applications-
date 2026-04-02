@@ -129,13 +129,24 @@
 
 import React from 'react'
 import UseRef from './components/UseRef'
-import RenderCount from './components/RenderCount'
-
+import RenderCount from "./components/Routing/RenderCounter";
+import UseMemo from './components/Routing/UseMemo';
+import UserList from './components/Routing/UserList'
+import SortedNumber from './components/Routing/SortNumber'
+import Callback from './components/Routing/CallBack'
 function App() {
+
   return (
     <div>
+        <UseMemo/>
+        <UserList/>
+        {/* <SortedNumber/> */}
+        <Callback/>
+
+{/*       
       <UseRef/>
-      <RenderCount/>
+      <RenderCount/> */}
+    
     </div>
   )
 }

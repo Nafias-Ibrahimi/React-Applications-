@@ -22,3 +22,4 @@ function RenderCounter() {
 }
 
 export default RenderCounter
+
