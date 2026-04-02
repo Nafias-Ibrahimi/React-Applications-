@@ -134,6 +134,7 @@ import UseMemo from './components/Routing/UseMemo';
 import UserList from './components/Routing/UserList'
 import SortedNumber from './components/Routing/SortNumber'
 import Callback from './components/Routing/CallBack'
+import ControlledForm from './components/Routing/ControlledForm'
 function App() {
 
   return (
@@ -142,6 +143,7 @@ function App() {
         <UserList/>
         {/* <SortedNumber/> */}
         <Callback/>
+        <ControlledForm/>
 
 {/*       
       <UseRef/>
